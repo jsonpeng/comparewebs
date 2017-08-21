@@ -1,0 +1,143 @@
+<!--网站页首-->
+{{template "../tpl/user/user.header.tpl" .}}
+<!--/网站页首-->
+
+
+<div class="compare-login-form" ng-app="compareLogin">
+
+<h2 style="color:white;">数字货币比价平台</h2>
+
+<hr />
+
+
+    <form ng-controller="register" class="compare-form-style" name="registerForm" action="" method="post">
+
+    <div class="compare-form-header" style="height:50px;
+    border-bottom:1px solid #e2e2e2;
+    position:relative;">
+    
+     <div class="compare-form-switch" id="myTab">
+   <div class="compare-row" >
+         <a href="/login" class="dropdown-toggle"  style="color: #333;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;">
+                登录
+            </a>
+        
+         <a href="/reg" class="compare-active"  style="color: #333;margin-left:50px;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;">
+            注册
+        </a>
+       </div>
+       </div>
+    </div>
+    
+  
+  <div class="form-group mt15">
+    <label >用户名</label>
+    <input type="text" class="form-control" name="Username" placeholder="请输入用户名" ng-model="formData.Username" ng-minlength="6" ng-maxlength="16" required>
+  </div>
+    <p>
+    <span style="color: red" ng-show="registerForm.Username.$invalid">
+                        <span ng-show="registerForm.Username.$error.minlength">*用户名不得少于6位</span>
+                        <span ng-show="registerForm.Username.$error.maxlength">*用户名不得超过16位</span>
+                       
+                    </span>
+                </p>
+
+  <div class="form-group">
+    <label >密码</label>
+    <input type="password" class="form-control" name="Password" placeholder="请输入密码" ng-model="formData.Password"  ng-minlength="6" ng-maxlength="16" required>
+  </div>
+ <p>
+    <span style="color: red" ng-show="registerForm.Password.$invalid">
+                        <span ng-show="registerForm.Password.$error.minlength">*密码不得少于6位</span>
+                        <span ng-show="registerForm.Password.$error.maxlength">*密码不得超过16位</span>
+                    </span>
+                </p>
+
+    <div class="form-group">
+    <label >再次输入密码</label>
+    <input type="password" class="form-control" name="pass" placeholder="请再次输入密码" ng-model="formData.pass" required>
+  </div>
+     <p>
+                    <span style="color: red" ng-show="registerForm.Password.$valid">
+                        <span ng-show="formData.Password!=formData.pass">*两次输入的密码不一致</span>
+                    </span>
+                </p>
+
+  <div class="form-group">
+ <label>邮箱</label>
+ <input type="text" class="form-control" name="Email" placeholder="请输入你的邮箱" ng-model="formData.Email"   ng-minlength="4" ng-maxlength="16" required>
+ 
+ </div>
+ <p>
+   <span style="color: red" ng-show="registerForm.Email.$invalid">
+                        <span ng-show="registerForm.Email.$error.minlength">*邮箱输入过短</span>
+                        <span ng-show="registerForm.Email.$error.maxlength">*邮箱格式错误</span>
+    </span>
+</p>
+
+
+
+
+ <div class="form-group">
+ <label>手机号</label>
+ <input type="text" class="form-control" name="Phone" placeholder="请输入你的手机号" ng-model="formData.Phone"   ng-minlength="4" ng-maxlength="11" required>
+ 
+ </div>
+ <p>
+   <span style="color: red" ng-show="registerForm.Phone.$invalid">
+                        <span ng-show="registerForm.Phone.$error.minlength">*手机号输入过短</span>
+                        <span ng-show="registerForm.Phone.$error.maxlength">*手机号格式错误</span>
+    </span>
+</p>
+ <label>验证码</label>
+<div class="form-inline ">
+
+       <div class="form-group ">  
+
+ <input type="text" class="form-control" name="VarifyCode" placeholder="请输入验证码(区分大小写)" ng-model="formData.VarifyCode"    ng-maxlength="4" required>
+ <span id="varifycode" title="看不清，换一张" onclick="switchCode()"></span> 
+       </div>   
+</div>
+
+
+        <p>
+   <span style="color: red" ng-show="registerForm.VarifyCode.$invalid">
+                        <span ng-show="registerForm.VarifyCode.$error.maxlength">*验证码输入格式错误</span>
+    </span>
+        </p> 
+
+      <div ng-show="!registerForm.Username.$invalid && !registerForm.Password.$invalid && formData.Password == formData.pass && !registerForm.Phone.$invalid && !registerForm.Email.$invalid">
+         
+<span class="icon-ok" style="color: green">通过注册验证</span>
+<hr />
+</div>
+     
+  <div class="form-group">
+  <input type="button"  value="注册" class="btn btn-primary"  ng-controller="register" ng-click="asave()"  ng-disabled="registerForm.Username.$invalid || registerForm.Password.$invalid || formData.Password != formData.pass || registerForm.Phone.$invalid || registerForm.Email.$invalid" />
+</div>
+
+  
+
+</form>
+
+
+<hr />
+
+
+
+<div class="container">
+<a href="/">返回首页</a>  
+
+</div>
+</div>
+
+
+<!-- 网站页尾-->
+{{template "../tpl/user/user.footer.tpl" .}}
+<!-- /网站页尾-->

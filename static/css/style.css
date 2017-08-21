@@ -1,0 +1,256 @@
+/*
+css reset
+ */
+ 
+body{
+    font-family: "微软雅黑";
+}
+
+a,a:focus,a:hover,a:visited {
+    text-decoration: none!important
+}
+
+ul li {
+    list-style: none
+}
+
+.container-fluid,.container{
+    width:1170px !important;
+}
+
+
+
+@media only screen  and (max-width:1472px) {
+    .container-fluid,.container{
+    width:970px !important;
+}
+
+}
+
+/*
+首页样式
+*/
+.compare-index-banner{
+	background:url(images/bg.png);
+	height:700px;
+	width:100%;
+	background-size: cover;
+}
+
+.compare-index-logo{
+    font-size:16px;
+    color:white;
+}
+.compare-index-logo:hover{
+   color: rgba(255,255,255,.5);
+}
+
+.index-logo{
+    width: 50px;
+    height:50px;
+}
+
+/*
+navbar 
+ */
+.mynavbar .navbar-nav>li>a {
+    color: white;
+    font-size:16px;
+    padding: 10px 30px;
+}
+
+.mynavbar .navbar-nav>li>a:hover{
+   color: rgba(255,255,255,.5);
+    background: transparent;
+}
+
+.index-login:hover{
+    border: 1px solid #fff;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.index-reg:hover{
+    background: #4293ff !important;
+    margin-left: 10px;
+    color: white !important;
+}
+/*
+比价预览
+*/
+ .compare-index-yulan{
+    width: 100%;
+    background: rgb(255,255,255);
+    opacity: 0.1;
+    height:500px;
+ }
+
+.compare-index-content{
+    width: 100%;
+    background: url(images/about-bg.jpg);
+    height: 100%;
+    padding-bottom: 50px
+}
+
+.compare-index-content p{
+    line-height: 28px;
+    color: white;
+    font-size: 16px;
+}
+/*
+margin padding 设置
+ */
+
+.mt100{
+    margin-top: 50px;
+}
+.mt50{
+    margin-top: 50px
+}
+
+.mb50{
+margin-bottom:50px;
+}
+
+.mt30{
+    margin-top:30px;
+}
+
+.mt20{
+    margin-top: 20px;
+}
+
+.mb30{
+margin-bottom:30px;
+}
+.pt10{
+padding-top: 10px;
+}
+
+.ml30{
+    margin-left: 30px;
+}
+
+/*
+扩展内容
+ */
+
+.container .p-content {
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    line-height: 36px;
+    width: 70%;
+    margin: 0 auto;
+}
+.add-service{
+    border: 4px solid;position: relative;
+}
+
+.add-service-box{
+    margin-top: -25px;position:relative;
+}
+
+.add-service-xiantiao-left{
+    position: absolute;left: 100px;top: -8px;background: white;padding-left: 20px;padding-right: 20px;border-bottom: 4px dotted;
+}
+
+.add-service-xiantiao-right{
+position: absolute;right: 100px;top: -8px;background: white;padding-left: 20px;padding-right: 20px;border-bottom: 4px dotted;   
+}
+
+.add-service-title{
+    margin-top: 0px;
+    font-weight: 800;
+    font-size: 48px;
+    background: white;
+    display: table;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.add-service-child-title{
+    font-weight: 800;
+    font-size: 60px;
+}
+
+.add-service h2{
+    color: black !important;
+    font-size:28px;
+}
+
+.add-service-button-black{
+    color: black;
+    border: 3px solid black;
+    font-weight: 800;
+    padding: 5px 40px;
+    display: inline-block;
+}
+
+.add-service-button-black-right{
+    display: inline-block;
+    margin-left: 62px;
+}
+
+.add-service-button-black:hover{
+    color: white;
+    border:none;
+    background-color: rgb(26,143,246);
+}
+
+.add-service-button-blue{
+    color: white;
+    font-weight: 800;
+    padding: 5px 40px;
+    display: inline-block;
+    background-color: rgb(26,143,246);
+}
+
+/*
+关于比价平台
+ */
+
+.compare-index-content h1{
+padding-top: 20px;
+color: white;
+font-weight: 700;
+font-size:40px;
+text-align: center;
+}
+
+.compare-index-content h2{
+color: white;
+font-weight: 700;
+font-size:30px;
+text-align: center;
+}
+
+/*
+网站页尾
+ */
+
+
+.compare-footer1{
+    background: #3a3a3a;
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft YaHei";
+    z-index: 22222222;
+}
+
+.compare-footer1 p {
+  
+    color: white;
+}
+
+.compare-footer2{
+    width: 100%;
+    height: auto;
+    background: #1d1d1d;
+    color: #949494;
+    line-height: 90%;
+    position: relative;
+    z-index: 22222222;
+}

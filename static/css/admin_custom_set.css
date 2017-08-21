@@ -1,0 +1,123 @@
+/*
+后台首页顶部颜色设置
+*/
+.skin-blue .main-header .logo {
+    background-color: rgb(63,71,133);
+}
+
+.skin-blue .main-header .navbar {
+    background-color:rgb(52,71,133);
+}
+
+.skin-blue .main-header li.user-header {
+    background-color:rgb(52,71,133) ;
+}
+
+ .skin-blue .user-panel>.info, .skin-blue .user-panel>.info>a {
+    color: black;
+}
+ 
+ .skin-blue .sidebar-form input[type="text"], .skin-blue .sidebar-form .btn {
+    background-color: #fff;
+}
+
+.skin-blue .sidebar-menu>li>.treeview-menu {
+    background: #fff;
+}
+ 
+ .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+    background-color: #fff;
+}
+
+.skin-blue .sidebar a {
+    color: black;
+}
+
+.skin-blue .sidebar-menu>li.header {
+    color: black;
+    background: #fff;
+}
+
+
+.skin-blue .treeview-menu>li>a{
+    color: #666;
+}
+
+.skin-blue .treeview-menu>li.active>a, .skin-blue .treeview-menu>li>a:hover {
+    color: black;
+}
+
+/*
+layer setting
+ */
+
+.layui-layer-dialog {
+    min-width: 260px;
+    top: 25% !important;
+}
+
+.layui-layedit {
+    background: #fff !important;
+}
+
+.layui-form-select dl dd.layui-this, .layui-form-checked span, .layui-form-checked:hover span{
+    background-color: rgb(11,132,208) !important;
+}
+
+.layui-form-radioed i, .layui-form-radio i:hover , .layui-form-checked i{
+    color:rgb(11,132,208) !important;
+}
+
+.layui-form-checked, .layui-form-checked:hover {
+    border-color:rgb(11,132,208) !important;
+}
+.layui-form-item .layui-form-checkbox {
+    margin-top: 10px !important;
+}
+/*
+margin padding set
+ */
+.mt10{
+    margin-top: 10px;
+}
+.ml0{
+    margin-left: 0px !important;
+}
+
+.mr0{
+    margin-right: 0px;
+}
+
+.mb10{
+    margin-bottom: 10px;
+}
+
+.blog-admin-fabu{
+
+}
+
+
+/*
+添加用户按钮
+ */
+
+.comparewebs-button-color{
+    background-color:rgb(52,71,133) !important;
+}
+
+.comparewebs-admin-adduser{
+    color: black;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 0px;
+    background:transparent;
+}
+
+.comparewebs-admin-adduser:hover{
+    background: rgb(52,71,133);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 15px;
+}
+

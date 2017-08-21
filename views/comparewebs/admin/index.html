@@ -1,0 +1,92 @@
+<!--网站页首-->
+{{template "../tpl/admin/admin.header.tpl" .}}
+<!--/网站页首-->
+
+        <div class="wrapper">
+
+          <!-- Main Header -->
+       {{template "../tpl/admin/admin_header.tpl" .}}
+          <!--/Main Header-->
+
+          <!-- Left side column. contains the logo and sidebar -->
+          <aside class="main-sidebar">
+
+            <!-- sidebar: style can be found in sidebar.less -->
+     {{template "../tpl/admin/admin_sidebar.tpl" .}}
+            <!-- /.sidebar -->
+
+          </aside>
+
+          <!-- Content Wrapper. Contains page content -->
+          <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+              <h1>
+                用户列表
+               <a class="comparewebs-admin-adduser" id="addUser" href="javascript:;">添加用户</a> 
+              </h1>
+
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+              <!-- Your Page Content Here -->
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">所有用户</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>用户名</th>
+                  <th>密码</th>
+                  <th>邮箱</th>
+                  <th>电话</th>
+                  <th>创建时间</th>
+                  <th>更新时间</th>
+                  <th>是否授权</th>
+                  <th>授权起始时间</th>
+                  <th>授权结束时间</th>
+                  <th>授权次数</th>
+                  <th>操作</th>
+                </tr>
+                </thead>
+
+                <tbody>
+               {{range .AllUsers}}
+             <tr>
+             <td>{{.Id}}</td>
+             <td id="{{.Username}}">{{.Username}}</td>
+             <td id="{{.Password}}">{{.Password}}</td>
+             <td id="{{.Email}}">{{.Email}} </td>
+             <td id="{{.Tel}}">{{.Tel}}</td>
+             <td>{{.Created}}</td>
+             <td>{{.Updated}}</td>
+             <td id="{{.WetherAuthority}}">{{if .WetherAuthority}}是{{else}}否{{end}}</td>
+             <td>{{.AuthorityStartTimer}}</td>
+             <td>{{.AuthorityEndTimer}}</td>
+             <td>{{.AuthorityTimes}} </td>
+             <td><a class="editUserRow" id="{{.Id}}" >编辑</a>|<a class="delUserRow" id="{{.Id}}">删除</a></td>
+             </tr>
+              {{end}}
+                 </tbody>
+
+              </table>
+            </div>
+
+        </div>
+      </div>
+    </div>
+            </section>
+            <!-- /.content -->
+          </div>
+          <!-- /.content-wrapper -->
+
+<!--网站页尾-->
+{{template "../tpl/admin/admin.footer.tpl" .}}
+<!--/网站页尾-->
